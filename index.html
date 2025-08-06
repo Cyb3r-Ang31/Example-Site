@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Brockport Chiropractic</title>
+    <link rel="stylesheet" type="text/css" href="Stylesheet.css">
+  </head>
+  <body>
+    <div class="pageHeader">
+      <div id = "logo">
+        <img id="logoImg" src="ChiroLogoSmall.png">
+        <a href="">Brockport Chiropractic </a>
+        </a>
+      </div>
+      <div class="seperator">|</div>
+      <div class="dropdown">
+        <button>About Us</button>
+        <div class="under">           
+          <div><a href="#"> Dr. Perry </a></div>
+          <div><a href="#"> Our Staff </a></div>
+          <div><a href="#"> Contact Information </a></div>
+          <div><a href="#"> Hours Of Operation </a></div>
+          <div><a href="#"> Online Payments </a></div>
+        </div> 
+      </div>
+      <div class="seperator">|</div>
+      <div class="dropdown">
+        <button>Services</button>
+        <div class="under">           
+          <div><a href="#"> Massage Therapy </a></div>
+          <div><a href="#"> Sigma Instruments </a></div>
+        </div> 
+      </div>
+      <div class="seperator">|</div>
+      <div class="dropdown bigdropdown">
+        <button>Chiro. Method</button>
+        <div class="under">
+          <div><a href="#"> Your First Visit </a></div>
+          <div><a href="#"> Common Conditions </a></div>
+          <div><a href="#"> Chiro vs Medicine </a></div>
+        </div>
+      </div>
+      <div class="spacer"></div>
+    </div>
+    <div class="Master">
+      <div class = "TopImg">
+        <button onclick="chgImg(1)"><</button>
+        <img id="heroImg" src="SplashImage1.png">
+        <button onclick="chgImg(-2)">></button>  <!-- I'm pretty sure you gotta change this value whenever new images are added or removed, keep it to the inverse of number_of_images -1 -->
+      </div>
+      <br>
+      <div class="gridMaster">
+        <div class="sidebar">
+          <div class="sectionHeader">We've Moved!</div><br>
+          <div>
+            We are now located at 12 Liberty Street in Brockport, just a little ways down from the old office on Main St. Brockport.
+          <br><br><div class="sectionHeader">Now accepting PayPal</div><br>
+          </div>
+          <div>
+            We are now PayPal verified and accepting payement through their secure interface.
+          </div>
+        </div>
+        
+        <div class="Content">
+          <div class="sectionHeader">Your Hometown Chriopractor</div><br>
+          <div>
+            For over 20 years now, Dr. Daniel Perry has been dedicated to serving the Brockport community through affordable, effective chiropractic service. We are dedicated to improving your health, whatever it takes. <br>
+            <br>
+            <div class="list">
+              <div class="ListHeading">We can help you with: </div><br>
+              - Headaches <br>
+              - Workplace Injuries <br>
+              - Whiplash & Other Car Accident Injuries <br>
+              - Sports Injuries <br>
+              - Neck, Shoulder, & Back Pains <br>
+              - Muscle Spasms <br>
+              - And Much More <br>
+            </div>
+            <br>
+          </div>
+            <div class="subHeader">Chiropractors are real Doctors</div><br>
+            <div>
+              Doctors of Chiropractic (D.C.) comprise the second largest health care profession with over 50,000 practitioners in the U.S. They earn the title “doctor” along with Medical Doctors (M.D.), Doctors of Osteopathy (D.O.), and Dentists (D.D.S. and D.M.D.). <br> The educational process leading to the title Doctor of Chiropractic is quite similar to that of an M.D. and D.O.<br> <br>In order to obtain a D.C. degree, a student must complete several years of pre-chiropractic studies at a college or university, followed by four academic years of Chiropractic education totaling a minimum of 7 years of study.
+            </div>
+        </div>
+        
+        <div class="sidebar">
+          <div class="sectionHeader">Hours</div><br>
+          <div class="table">
+            <div>Mon...&#9; 9-12PM / 3-6PM</div>
+            <div>Tue...&#9; 9-12AM / 3-7PM</div>
+            <div>Wed...&#9; 2PM-6PM</div>
+            <div>Thrs...&#9; 9-12PM / 3-7PM</div>
+            <div>Fri...&#9; 9AM-1PM</div>
+            <div>Sat...&#9; 8AM-11AM</div>
+          </div>
+          <br>
+         <div>We are not open on Sundays and Holidays</div>
+        </div>
+      </div>
+      <div class="pageFooter">
+        <a href="#">Privacy Notice</a>
+        <div>
+          - Copyright © 2025  Brockport Chiropractic --- All Rights Reserved -
+        </div>
+        <a href="#">Homepage</a>
+      </div>
+    </div>
+  </body>
+<script>
+var curImg = 0;
+const imgs = ["SplashImage1.png", "SplashImage2.jpg", "SplashImage3.jpg"];
+function chgImg(dir) {
+  curImg = (curImg + dir)%3;
+  document.getElementById("heroImg").src = imgs[Math.abs(curImg)];
+}
+</script> 
+</html>
