@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Brockport Chiropractic</title>
+    <link rel="stylesheet" type="text/css" href="Stylesheet.css">
+  </head>
+  <body onload="foo()">
+    <div class="pageHeader">
+      <div id = "logo">
+        <img id="logoImg" src="ChiroLogoSmall.png">
+        <a href="index.html">Brockport Chiropractic </a>
+        </a>
+      </div>
+      <div class="seperator">|</div>
+      <div class="dropdown">
+        <button>About Us</button>
+        <div class="under">           
+          <div><a href="PlaceholderPage.html"> Dr. Perry </a></div>
+          <div><a href="PlaceholderPage.html"> Our Staff </a></div>
+          <div><a href="PlaceholderPage.html"> Contact Information </a></div>
+          <div><a href="PlaceholderPage.html"> Hours Of Operation </a></div>
+          <div><a href="PlaceholderPage.html"> Online Payments </a></div>
+        </div> 
+      </div>
+      <div class="seperator">|</div>
+      <div class="dropdown">
+        <button>Services</button>
+        <div class="under">           
+          <div><a href="PlaceholderPage.html"> Massage Therapy </a></div>
+          <div><a href="PlaceholderPage.html"> Sigma Instruments </a></div>
+        </div> 
+      </div>
+      <div class="seperator">|</div>
+      <div class="dropdown bigdropdown">
+        <button>Chiro. Method</button>
+        <div class="under">
+          <div><a href="PlaceholderPage.html"> Your First Visit </a></div>
+          <div><a href="PlaceholderPage.html"> Common Conditions </a></div>
+          <div><a href="PlaceholderPage.html"> Chiro vs Medicine </a></div>
+        </div>
+      </div>
+      <div class="spacer"></div>
+    </div>
+    <div class="Master">
+      <br>
+      <div class="gridMaster">
+        <div></div>
+        <div class="Content" style="height:1000px;">
+          <div class="controlPanel">
+            <form id="logForm">
+              <label for="User"> Username:  </label> <br>
+              <input type="text" id="User" name="User"> <br>
+              <label for="Pass"> Password:  </label> <br>
+              <input type="password" id="Pass" name="Pass"> <br> <br>
+
+              <button type="button" onclick="sumbitCreds()">Click Me!</button> 
+            </form>
+
+            <div id="Hidden" class="controlPanel" style="display:none;">
+              <form id="Hours Form" style="justify:left; text-align:left;">
+              
+
+              <div> <label for="User" class="controlPanelOdd" style="position:absolute; left: 10%; width:25%;">  Monday:  </label> <span class="controlPanelOdd" style="position:absolute; left:30%;">   <input type="time" id="MonO" name="User"  value=09:00 class="timeInput"> - <input type="time"  id="MonC" name="User" value=04:30 class="timeInput"></span>    </div><br><br>
+              <div> <label for="User" class="controlPanelEven" style="position:absolute; left: 10%; width:25%;"> Tuesday: </label> <span class="controlPanelEven" style="position:absolute; left:30%;">  <input type="time" id="TueO" name="User"  value=09:00 class="timeInput"> - <input type="time"  id="TueC" name="User" value=04:30 class="timeInput"></span>    </div><br><br>
+              <div> <label for="User" class="controlPanelOdd" style="position:absolute; left: 10%; width:25%;">  Wednsday:</label> <span class="controlPanelOdd" style="position:absolute; left:30%;">   <input type="time" id="WedO" name="User"  value=09:00 class="timeInput"> - <input type="time"  id="WedC" name="User" value=04:30 class="timeInput"></span>    </div><br><br>
+              <div> <label for="User" class="controlPanelEven" style="position:absolute; left: 10%; width:25%;"> Thursday:</label> <span class="controlPanelEven" style="position:absolute; left:30%;">  <input type="time" id="ThrO" name="User"  value=09:00 class="timeInput"> - <input type="time"  id="ThrC" name="User" value=04:30 class="timeInput"></span>    </div><br><br>
+              <div> <label for="User" class="controlPanelOdd" style="position:absolute; left: 10%; width:25%;">  Friday:  </label> <span class="controlPanelOdd" style="position:absolute; left:30%;">   <input type="time" id="FriO" name="User"  value=09:00 class="timeInput"> - <input type="time"  id="FriC" name="User" value=04:30 class="timeInput"></span>    </div><br><br>
+              <div> <label for="User" class="controlPanelEven" style="position:absolute; left: 10%; width:25%;"> Saturday:</label> <span class="controlPanelEven" style="position:absolute; left:30%;">  <input type="time" id="SatO" name="User"  value=09:00 class="timeInput"> - <input type="time"  id="SatC" name="User" value=04:30 class="timeInput"></span>    </div><br><br>
+              <div> <label for="User" class="controlPanelOdd" style="position:absolute; left: 10%; width:25%;">  Sunday:  </label> <span class="controlPanelOdd" style="position:absolute; left:30%;">   <input type="time" id="SunO" name="User"  value=09:00 class="timeInput"> - <input type="time"  id="SunC" name="User" value=04:30 class="timeInput"></span>    </div><br><br>
+              <button type="button" onclick="applyChanges()">Apply Changes</button> <span id="readout" style="font-size:10pt;"></span>
+            </form>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="pageFooter">
+        <a href="PlaceholderPage.html">Privacy Notice</a>
+        <div>
+          - Copyright © 2025  Brockport Chiropractic --- All Rights Reserved -
+        </div>
+        <a href="index.html">Homepage</a>
+      </div>
+    </div>
+  </body>
+<script>
+function sumbitCreds(){
+  var iU = document.getElementById("User").value;
+  var iP = document.getElementById("Pass").value;
+  if (iP == "Chat")
+  {
+    document.getElementById("Hidden").style = "display:relative;"; 
+    document.getElementById("logForm").style = "display:none;"; 
+  }
+  else {alert("Incorrect Username And/Or Password");}
+}
+function applyChanges()
+{
+  var MonO = document.getElementById("MonO").value;
+  var MonC = document.getElementById("MonC").value;
+
+  var TueO = document.getElementById("TueO").value;
+  var TueC = document.getElementById("TueC").value;
+
+  var WedO = document.getElementById("WedO").value;
+  var WedC = document.getElementById("WedC").value;
+
+  var ThrO = document.getElementById("ThrO").value;
+  var ThrC = document.getElementById("ThrC").value;
+
+  var FriO = document.getElementById("FriO").value;
+  var FriC = document.getElementById("FriC").value;
+
+  var SatO = document.getElementById("SatO").value;
+  var SatC = document.getElementById("SatC").value;
+
+  var SunO = document.getElementById("SunO").value;
+  var SunC = document.getElementById("SunC").value;
+
+  readout("Changes Saved");
+
+  setCookie("MonO", MonO, 2);    setCookie("MonC", MonC, 2);
+  setCookie("TueO", TueO, 2);    setCookie("TueC", TueC, 2);
+  setCookie("WedO", WedO, 2);    setCookie("WedC", WedC, 2);
+  setCookie("ThrO", ThrO, 2);    setCookie("ThrC", ThrC, 2);
+  setCookie("FriO", FriO, 2);    setCookie("FriC", FriC, 2);
+  setCookie("SatO", SatO, 2);    setCookie("SatC", SatC, 2);
+  setCookie("SunO", SunO, 2);    setCookie("SunC", SunC, 2);
+
+  delay(readout,"",2000);
+}
+
+function delay(func, arg, ms){
+  setTimeout(function(){func(arg)}, ms);  
+}
+
+function foo(){
+  let MonO = getCookie("MonO");
+  let TueO = getCookie("TueO");
+  let WedO = getCookie("WedO");
+  let ThrO = getCookie("ThrO");
+  let FriO = getCookie("FriO");
+  let SatO = getCookie("SatO");
+  let SunO = getCookie("SunO");
+
+  let MonC = getCookie("MonC");
+  let TueC = getCookie("TueC");
+  let WedC = getCookie("WedC");
+  let ThrC = getCookie("ThrC");
+  let FriC = getCookie("FriC");
+  let SatC = getCookie("SatC");
+  let SunC = getCookie("SunC");
+  
+  if (Mon0 != "") {document.getElementById("MonO").value = MonO;}
+  if (Tue0 != "") {document.getElementById("TueO").value = TueO;}
+  if (Wed0 != "") {document.getElementById("WedO").value = WedO;}
+  if (Thr0 != "") {document.getElementById("ThrO").value = ThrO;}
+  if (Fri0 != "") {document.getElementById("FriO").value = FriO;}
+  if (Sat0 != "") {document.getElementById("SatO").value = SatO;}
+  if (Sun0 != "") {document.getElementById("SunO").value = SunO;}
+
+}
+
+function readout(message){
+  document.getElementById("readout").innerHTML = message;
+}
+
+function setCookie(cname, cvalue, exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  let expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+function getCookie(cname) {
+  let name = cname + "=";
+  let ca = document.cookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+</script> 
+</html> 
