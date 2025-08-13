@@ -8,7 +8,7 @@
     <title>Brockport Chiropractic</title>
     <link rel="stylesheet" type="text/css" href="Stylesheet.css">
   </head>
-  <body>
+  <body onload="UpdateHours()">
     <div class="pageHeader">
       <div id = "logo">
         <img id="logoImg" src="ChiroLogoSmall.png">
@@ -90,12 +90,14 @@
         <div class="sidebar">
           <div class="sectionHeader">Hours</div><br>
           <div class="table">
-            <div>Mon...&#9; 9-12PM / 3-6PM</div>
-            <div>Tue...&#9; 9-12AM / 3-7PM</div>
-            <div>Wed...&#9; 2PM-6PM</div>
-            <div>Thrs...&#9; 9-12PM / 3-7PM</div>
-            <div>Fri...&#9; 9AM-1PM</div>
-            <div>Sat...&#9; 8AM-11AM</div>
+
+            <div id="Cil">Mon: <span id="Mon" class="timeDisp"> 9-12PM / 3-6PM </span></div>
+            <div id="Cil">Tue: <span id="Tue" class="timeDisp"> 9-12PM / 3-6PM </span></div>
+            <div id="Cil">Wed: <span id="Wed" class="timeDisp"> 9-12PM / 3-6PM </span></div>
+            <div id="Cil">Thr: <span id="Thr" class="timeDisp"> 9-12PM / 3-6PM </span></div>
+            <div id="Cil">Fri: <span id="Fri" class="timeDisp"> 9-12PM / 3-6PM </span></div>
+            <div id="Cil">Sat: <span id="Sat" class="timeDisp"> 9-12PM / 3-6PM </span></div>
+
           </div>
           <br>
          <div>We are not open on Sundays and Holidays</div>
@@ -111,11 +113,65 @@
     </div>
   </body>
 <script>
+
+
+  let MonO = getCookie("MonO");
+  let TueO = getCookie("TueO");
+  let WedO = getCookie("WedO");
+  let ThrO = getCookie("ThrO");
+  let FriO = getCookie("FriO");
+  let SatO = getCookie("SatO");
+  let SunO = getCookie("SunO");
+
+  let MonC = getCookie("MonC");
+  let TueC = getCookie("TueC");
+  let WedC = getCookie("WedC");
+  let ThrC = getCookie("ThrC");
+  let FriC = getCookie("FriC");
+  let SatC = getCookie("SatC");
+  let SunC = getCookie("SunC");
+
+  
 var curImg = 0;
 const imgs = ["SplashImage1.png", "SplashImage2.jpg", "SplashImage3.jpg"];
 function chgImg(dir) {
   curImg = (curImg + dir)%3;
   document.getElementById("heroImg").src = imgs[Math.abs(curImg)];
+}
+function UpdateHours()  //Fakes updating the hours using cookies
+{
+  document.getElementById("Mon").innerHTML = MonO.concat(" - ").concat(MonC);
+  document.getElementById("Tue").innerHTML = TueO.concat(" - ").concat(TueC);
+  document.getElementById("Wed").innerHTML = WedO.concat(" - ").concat(WedC);
+  document.getElementById("Thr").innerHTML = ThrO.concat(" - ").concat(ThrC);
+  document.getElementById("Fri").innerHTML = FriO.concat(" - ").concat(FriC);
+  document.getElementById("Sat").innerHTML = SatO.concat(" - ").concat(SatC);
+}
+function foo(){
+
+  
+  if (Mon0 != "") {document.getElementById("MonO").value = MonO;}
+  if (Tue0 != "") {document.getElementById("TueO").value = TueO;}
+  if (Wed0 != "") {document.getElementById("WedO").value = WedO;}
+  if (Thr0 != "") {document.getElementById("ThrO").value = ThrO;}
+  if (Fri0 != "") {document.getElementById("FriO").value = FriO;}
+  if (Sat0 != "") {document.getElementById("SatO").value = SatO;}
+  if (Sun0 != "") {document.getElementById("SunO").value = SunO;}
+
+}
+function getCookie(cname) {
+  let name = cname + "=";
+  let ca = document.cookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
 }
 </script> 
 </html>
