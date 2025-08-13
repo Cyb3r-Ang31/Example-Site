@@ -68,6 +68,39 @@ br{
 	background-color: var(--TintLight);
 }
 
+.timeDisp {
+	float:right;
+	padding-right: 5px;
+}
+
+
+.timeInput
+{
+	width:60px;
+}
+
+.controlPanelOdd
+{
+	padding:5pt;
+	postion:absolute;
+	background-color:rgba(200,200,200,1);	
+	height:19pt;
+}
+.controlPanelEven
+{
+	padding:5pt;
+	postion:absolute;
+	background-color:rgba(200,200,255,1);	
+	height:19pt;
+}
+
+.controlPanel
+{
+	text-align:center;
+	justify:center;
+	font-size:18pt;
+}
+
 .list{
 	padding: 2%;
 	margin: 10px;
